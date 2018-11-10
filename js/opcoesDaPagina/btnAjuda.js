@@ -1,16 +1,6 @@
-function randomColor() {
-    return '#'+Math.floor(Math.random()*16777215).toString(16);
-}
 ;(function(){
-    const msgs = [
-        { conteudo: 'Bem vindo', cor: randomColor() }
-        ,{ conteudo: 'Clique no botão', cor: randomColor() }
-    ];
     const btnAjuda = document.querySelector('#btnAjuda');
     btnAjuda.addEventListener('click', function() {
-        // msgs.forEach(function(msg) {
-        //     adicionarCartaoNoMural(msg);
-        // });
         const xhr = new XMLHttpRequest();
         xhr.open('json', 'https://ceep.herokuapp.com/cartoes/instrucoes');
         xhr.send();
