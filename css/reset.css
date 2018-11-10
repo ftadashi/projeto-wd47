@@ -16,3 +16,10 @@ body {
 .no-js {
   display: none !important;
 }
+
+@media (prefers-color-scheme: dark) {
+  .mural {
+    background-color: #000;
+    color: #fff;
+  }
+}

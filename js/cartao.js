@@ -16,12 +16,14 @@
             }
         });
         cartao.addEventListener('keydown', function(event) {
+            console.log(event);
             if (event.target.classList.contains('opcoesDoCartao-opcao')
                 && (event.key === 'Enter' || event.key === ' ')) {
                     event.target.click();
             }
         });
         cartao.addEventListener('click', function(event) {
+            console.log(event);
             const elementoSelecionado = event.target;
             if (elementoSelecionado.classList.contains('opcoesDoCartao-remove')) {
                 cartao.classList.add('cartao--some');
