@@ -12,7 +12,7 @@
             , cartoes: Array.from($('.cartao')).map(function(cartao) {
                 return {
                     conteudo: cartao.querySelector('.cartao-conteudo').textContent
-                    ,cor: getComputedStyle(cartao).getPropertyValue('backgroud-color')
+                    ,cor: getComputedStyle(cartao).getPropertyValue('background-color')
                 };
             })
         };
