@@ -1,4 +1,5 @@
 ;(function() {
+    'use strict';
     const cartoes = document.querySelectorAll('.cartao');
     for (let i = 0; i < cartoes.length; i++) {
         const cartao = cartoes[i];

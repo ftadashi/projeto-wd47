@@ -1,4 +1,5 @@
 ;(function(){
+    'use strict';
     let numeroDoCartao = 0;
     window.adicionarCartaoNoMural = function(cartaoObj) {
         numeroDoCartao++;

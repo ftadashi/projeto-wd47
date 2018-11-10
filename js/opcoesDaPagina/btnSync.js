@@ -1,4 +1,5 @@
 ;(function() {
+    'use strict';
     const btnSync = $('#btnSync');
     btnSync.on('click', function() {
         btnSync.addClass('botaoSync--esperando');

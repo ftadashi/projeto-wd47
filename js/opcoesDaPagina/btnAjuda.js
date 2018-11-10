@@ -1,4 +1,5 @@
-;(function(){
+;(function() {
+    'use strict';
     const btnAjuda = document.querySelector('#btnAjuda');
     btnAjuda.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();

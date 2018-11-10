@@ -1,4 +1,5 @@
-;(function(){
+;(function() {
+    'use strict';
     const btns = document.querySelectorAll('.opcoesDoCartao-remove');
     for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener('click', function() {

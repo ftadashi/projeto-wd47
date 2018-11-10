@@ -1,4 +1,5 @@
 ;(function() {
+    'use strict';
     let numeroDoCartao = 0;
     const form = document.querySelector('.formNovoCartao');
     const textarea = form.querySelector('.formNovoCartao-conteudo');
