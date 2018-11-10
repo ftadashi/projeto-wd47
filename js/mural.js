@@ -49,4 +49,16 @@
         });
         $('.mural').append(cartao);
     }
+    $.ajax({
+        url: 'https://ceep.herokuapp.com/cartoes/carregar'
+        ,method: 'GET'
+        ,data: {usuario: 'f.tadashi@gmail.com'}
+        ,dataType: 'jsonp'
+        ,success: function(objeto) {
+            const cartoes = objeto.cartoes;
+            cartoes.forEach(function(cartao) {
+                adicionarCartaoNoMural(cartao);
+            });
+        }
+    });
 })();
