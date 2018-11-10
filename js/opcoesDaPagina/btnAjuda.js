@@ -2,7 +2,8 @@
     const btnAjuda = document.querySelector('#btnAjuda');
     btnAjuda.addEventListener('click', function() {
         const xhr = new XMLHttpRequest();
-        xhr.open('json', 'https://ceep.herokuapp.com/cartoes/instrucoes');
+        xhr.open('GET', 'https://ceep.herokuapp.com/cartoes/instrucoes');
+        xhr.responseType = 'json';
         xhr.send();
         xhr.addEventListener('load', function() {
             const objeto = xhr.response;
