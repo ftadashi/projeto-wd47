@@ -33,7 +33,6 @@
             }
         });
     }
-
     const opcoes = document.querySelectorAll('.opcoesDoCartao-opcao');
     for (let i = 0; i < opcoes.length; i++) {
         opcoes[i].classList.remove('no-js');
