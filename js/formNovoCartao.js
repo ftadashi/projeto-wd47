@@ -1,9 +1,9 @@
 ;(function() {
     let numeroDoCartao = 0;
     const form = document.querySelector('.formNovoCartao');
-    form.addEventListener('submit', function(event) {
+    const textarea = form.querySelector('.formNovoCartao-conteudo');
+    function criarCartao(event) {
         event.preventDefault();
-        const textarea = form.querySelector('.formNovoCartao-conteudo');
         const isTextAreaVazio = textarea.value.trim().length === 0;
         if (isTextAreaVazio) {
             const msgErro = document.createElement('div');
@@ -18,7 +18,14 @@
         else {
             adicionarCartaoNoMural({conteudo: textarea.value});
             textarea.value = '';
-            textarea.focus();
+        }
+    }
+    form.addEventListener('submit', function(event) {
+        criarCartao(event);
+    });
+    textarea.addEventListener('keypress', function(event) {
+        if (event.ctrlKey && event.key === 'Enter') {
+            criarCartao(event)
         }
     });
     form.classList.remove('no-js');

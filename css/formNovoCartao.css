@@ -22,11 +22,11 @@
 	border: none;
 	resize: none;
 	width: 100%;
-	transition: height 1s linear;
+	transition: height 0.2s linear;
 }
 
 .formNovoCartao-conteudo:focus {
-	/* height: 7em */
+	height: 7em
 }
 
 .formNovoCartao-salvar {
