@@ -24,6 +24,20 @@
 	color: white;
 }
 
+.opcoesDaPagina-botao#btnAjuda {
+	width: 2em; 
+	height: 2em;
+	line-height: 0;
+	border-radius: 50%;
+	color: white;
+	background-color: #6B0CE8;
+}
+
+.opcoesDaPagina-botao#btnMudaLayout {
+	background-color: #E88E0C;
+}
+
+
 .opcoesDaPagina-opcao#busca {
 	border: none;
 	padding: .2em;
