@@ -1,6 +1,9 @@
 ;(function() {
     'use strict';
     let numeroDoCartao = 0;
+    window.randomColor = function() {
+        return '#' + Math.floor(Math.random()*16777215).toString(16);
+    };
     const form = document.querySelector('.formNovoCartao');
     const textarea = form.querySelector('.formNovoCartao-conteudo');
     function criarCartao(event) {
@@ -17,7 +20,10 @@
             form.insertBefore(msgErro, btnSubmit);
         }
         else {
-            adicionarCartaoNoMural({conteudo: textarea.value});
+            adicionarCartaoNoMural({
+                conteudo: textarea.value
+                ,cor: randomColor()
+            });
             textarea.value = '';
         }
     }
