@@ -20,7 +20,8 @@
         salvadorDeCartoes.send(JSON.stringify(infosDoMural));
         salvadorDeCartoes.addEventListener('load', function() {
             const response = JSON.parse(salvadorDeCartoes.response);
-            console.log(`${response.quantidade} cartões salvos em ${response.usuario}`);
+            const msg = `${response.quantidade} cartões salvos em ${response.usuario}`;
+            mensagem(msg);
             btnSync.removeClass('botaoSync--esperando');
             btnSync.addClass('botaoSync--sincronizado');
         });

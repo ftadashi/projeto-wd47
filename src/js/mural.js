@@ -1,7 +1,7 @@
 ;const adicionarCartaoNoMural = (function(){
     let numeroDoCartao = 0;
     'use strict';
-    const adicionarCartaoNoMural2 = function(cartaoObj) {
+    const adicionarCartao = function(cartaoObj) {
         numeroDoCartao++;
         const conteudoDoCartao = cartaoObj.conteudo;
         const corDoCartao = cartaoObj.cor;
@@ -56,12 +56,9 @@
         ,method: 'GET'
         ,data: {usuario: 'f.tadashi@gmail.com'}
         ,dataType: 'jsonp'
-        ,success: function(objeto) {
-            const cartoes = objeto.cartoes;
-            cartoes.forEach(function(cartao) {
-                adicionarCartaoNoMural2(cartao);
-            });
+        ,success: (response) => {
+            response.cartoes.forEach(adicionarCartao, console.log);
         }
     });
-    return adicionarCartaoNoMural2;
+    return adicionarCartao;
 })();
