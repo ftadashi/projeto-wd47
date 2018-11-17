@@ -1,0 +1,28 @@
+{
+  "name": "projeto-wd47-master",
+  "version": "1.0.0",
+  "description": "- Neste repositório iremos organizar todo o código que servira de base para os exercícios da apostila; - Cada exercício deverá ser mantido em uma branch.  - O HTML e CSS necessários deverão ser incluidos na branch master. - Para conseguir determinar a ordem que cada exercício aparece na apostila, temos um [Project](https://github.com/caelum/projeto-wd47/projects/1) aqui mesmo no Github. Quando um exercício novo for criado, o mesmo deve ser adicionado neste projeto, na ordem em que ele aparece e de preferência com uma descrição para servir de base para quem for escrever o conteúdo.",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    ,"start": "babel src --out-dir dist --presets @babel/env --copy-files --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftadashi/projeto-wd47.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ftadashi/projeto-wd47/issues"
+  },
+  "homepage": "https://github.com/ftadashi/projeto-wd47#readme"
+}
