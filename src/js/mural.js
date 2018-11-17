@@ -48,7 +48,9 @@
                 });
             }
         });
+        cartao.hide();
         $('.mural').append(cartao);
+        cartao.fadeIn('slow');
     };
     
     $.ajax({
