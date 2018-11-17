@@ -18,7 +18,6 @@
                 ,cor: randomColor()
             });
             mensagem('Cartão salvo com sucesso.');
-            esconderFormulario();
             textarea.value = '';
         }
     }

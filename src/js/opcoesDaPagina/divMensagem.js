@@ -2,6 +2,7 @@
     'use strict';
     window.mensagem = function(mensagem) {
         const form = document.querySelector('.formNovoCartao');
+        const mural = document.querySelector('.mural');
         const msgErro = document.createElement('div');
         msgErro.classList.add('formNovoCartao-msg');
         msgErro.textContent = mensagem
