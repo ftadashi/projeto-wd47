@@ -3,7 +3,10 @@
     'use strict';
     const adicionarCartao = function(cartaoObj) {
         numeroDoCartao++;
-        const conteudoDoCartao = cartaoObj.conteudo;
+        const conteudoDoCartao = cartaoObj.conteudo
+                                    .replace('\n', '<br>')
+                                    .replace(/\*\*(.*)\*\*/g, '<b>$1</b>')
+                                    .replace(/\*(.*)\*/g, '<em>$1</em>');
         const corDoCartao = cartaoObj.cor;
         const cartao = $(`
         <article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao">
@@ -59,7 +62,8 @@
         ,data: {usuario: 'f.tadashi@gmail.com'}
         ,dataType: 'jsonp'
         ,success: (response) => {
-            response.cartoes.forEach(adicionarCartao, console.log);
+            response.cartoes.forEach(adicionarCartao);
+            mensagem(`${response.cartoes.length} cartões adicionado`);
         }
     });
     return adicionarCartao;

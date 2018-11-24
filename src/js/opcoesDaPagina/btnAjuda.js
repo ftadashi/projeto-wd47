@@ -11,7 +11,7 @@
     });
     xhr.addEventListener('load', function() {
         ajudas = xhr.response.instrucoes;
-        mensagem(`${ajudas.length} cartões carregados.`);
+        // mensagem(`${ajudas.length} cartões carregados.`);
     });
     btnAjuda.addEventListener('click', function() {
         if (ajudas.length > 0) {
